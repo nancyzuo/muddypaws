@@ -1,0 +1,11 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: teal;
+}
+
+header {
+    font-family: 'Roboto', serif;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
