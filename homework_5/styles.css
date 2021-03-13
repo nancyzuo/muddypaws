@@ -5,13 +5,16 @@ body {
     margin: 0;
     padding: 0;
 }
+nav {
+    text-align: right;
+}
 header {
     background: rgb(163, 190, 158);
     padding: 20px;
 }
 section {
     background: rgb(242, 249, 240);
-    color: gray;
+    color: rgb(255, 255, 255);
     padding: 100px;
     display: flex;
     flex-direction: row;
@@ -19,9 +22,11 @@ section {
 div {
     background: rgb(163, 190, 158);
     display: inline-block;
-    width: 100px;
-    height: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
     margin: auto;
+    text-align: center;
 }
 ul {
     margin: 0;
@@ -35,4 +40,5 @@ li {
 footer {
     background:rgb(163, 190, 158);
     padding: 10px;
+    text-align: center;
 }
