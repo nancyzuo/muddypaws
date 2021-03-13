@@ -15,6 +15,21 @@ section {
     display: flex;
     flex-direction: row;
 }
+a:link {
+    color:rgb(163, 190, 158);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(70, 111, 63);
+    text-decoration: underline;
+    background-color:rgb(234, 255, 230);
+}
+
+a:visited {
+    text-decoration: none;
+    color:rgb(70, 111, 63);
+}
+
 .dogsquare {
     background:rgb(163, 190, 158);
     padding: 100px;
@@ -24,12 +39,12 @@ section {
     background:rgb(163, 190, 158);
     padding: 100px;
 }
-.custombox div {
+.custombox {
     display: flex;
     justify-content: space-between;
     border-radius: 15px 15px 0px 0px;
     background: rgb(163, 190, 158);
-    
+    display: inline-block;
 }
 div {
     display: inline-block;
@@ -44,9 +59,11 @@ nav {
     margin: auto;
 }
 .navright {
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
     align-items: flex-end;
+}
+.navtab {
     background-color: white;
     border-radius: 15px 15px 0px 0px;
 }
