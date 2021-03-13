@@ -5,25 +5,33 @@ body {
     margin: 0;
     padding: 0;
 }
-/* nav {
-    text-align: right;
-} */
 header {
     background: rgb(163, 190, 158);
-    padding: 30px;
+    padding: 20px;
 }
 section {
     background: rgb(242, 249, 240);
-    color: rgb(255, 255, 255);
     padding: 100px;
     display: flex;
     flex-direction: row;
 }
+.dogsquare {
+    background:rgb(163, 190, 158);
+    padding: 100px;
+}
+
+.catsquare {
+    background:rgb(163, 190, 158);
+    padding: 100px;
+}
 .custombox div {
-    padding: 200px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px 15px 0px 0px;
+    background: rgb(163, 190, 158);
+    
 }
 div {
-    background: rgb(163, 190, 158);
     display: inline-block;
     border-radius: 30px;
     margin: auto;
@@ -40,9 +48,11 @@ nav {
     justify-content: space-between;
     align-items: flex-end;
     background-color: white;
+    border-radius: 15px 15px 0px 0px;
 }
 .navleft {
     align-items: flex-start;
+    margin-left: 0px;
 }
 
  .tab {
@@ -53,9 +63,24 @@ nav {
     margin-left: 20px;
     text-align: center;
 }
+.cart {
+    padding: 200px;
+    align-items: flex;
+    background:rgb(163, 190, 158);
+}
+
+.total {
+    padding: 180px 125px;
+    border-radius: 0px;
+    background:rgb(163, 190, 158);
+}
 
 footer {
     background:rgb(163, 190, 158);
     padding: 10px;
     text-align: center;
+    margin: 0px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
