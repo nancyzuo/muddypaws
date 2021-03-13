@@ -1,20 +1,20 @@
 body {
     background: rgb(242, 249, 240);
     color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Andale Mono, monospace;
     margin: 0;
     padding: 0;
 }
-nav {
+/* nav {
     text-align: right;
-}
+} */
 header {
     background: rgb(163, 190, 158);
     padding: 30px;
 }
 section {
     background: rgb(242, 249, 240);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 100px;
     display: flex;
     flex-direction: row;
@@ -25,18 +25,27 @@ section {
 div {
     background: rgb(163, 190, 158);
     display: inline-block;
-    width: 200px;
-    height: 200px;
     border-radius: 30px;
     margin: auto;
     text-align: center;
+    padding: 10px;
 }
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 }
-.tab {
+.navright {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: white;
+}
+.navleft {
+    align-items: flex-start;
+}
+
+ .tab {
     display: inline-block;
     background-color:rgb(234, 255, 230);
     border-radius: 15px 15px 0px 0px;
@@ -44,9 +53,7 @@ ul {
     margin-left: 20px;
     text-align: center;
 }
-.logo {
-    text-align: left;
-}
+
 footer {
     background:rgb(163, 190, 158);
     padding: 10px;
