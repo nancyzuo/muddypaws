@@ -10,14 +10,17 @@ nav {
 }
 header {
     background: rgb(163, 190, 158);
-    padding: 20px;
+    padding: 30px;
 }
 section {
     background: rgb(242, 249, 240);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 100px;
     display: flex;
     flex-direction: row;
+}
+.custombox div {
+    padding: 200px;
 }
 div {
     background: rgb(163, 190, 158);
@@ -33,9 +36,16 @@ ul {
     padding: 0;
     list-style-type: none;
 }
-li {
+.tab {
     display: inline-block;
-    margin-right: 20px;
+    background-color:rgb(234, 255, 230);
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+.logo {
+    text-align: left;
 }
 footer {
     background:rgb(163, 190, 158);
