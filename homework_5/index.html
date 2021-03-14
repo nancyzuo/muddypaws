@@ -4,23 +4,42 @@
         <title>Muddy Paws | Home</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
         <header>
             <nav>
-                <div class="navleft"><a href="index.html">Muddy Paws</a></div>
-                <div class="navright">
-                    <div><a href="dog.html">dogs</a></div>
-                    <div><a href="cat.html">cats</a></div>
-                    <div><a href="profile.html">profile</a></div>
-                    <div><a href="cart.html">cart</a></div>
+                <div class="navleft">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="paw" class="logo">Muddy Paws
+                    </a>
                 </div>
-            </nav>
-            <h1>Home</h1>   
+                <div class="navright">
+                    <div class="navtab"><a href="dog.html">dogs</a></div>
+                    <div class="navtab"><a href="cat.html">cats</a></div>
+                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</i></a></div>
+                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</i></a></div>
+                </div>
+            </nav> 
         </header>
+        <h2>I own a...</h2>
         <section>
-            <div class="dogsquare"><a href="dog.html">dog</a></div>
-            <div class="catsquare"><a href="cat.html">cat</a></div>
+            <div class="container">
+                <a href="dog.html">
+                    <img src="images/dog.png" alt="cute dog" class="homedog">
+                    <div class="overlay">
+                        <div class="dogtext">dog</div>
+                    </div>
+                </a>
+            </div>
+            <div class="container">
+                <a href="cat.html">
+                    <img src="images/cat.png" alt="cute cat" class="homecat">
+                    <div class="overlay">
+                        <div class="cattext">cat</div>
+                    </div>
+                </a>
+            </div>
         </section>
         <section></section>
         <footer>made with 💚 in pittsburgh, pa.</footer>
