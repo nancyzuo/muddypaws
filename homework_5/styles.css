@@ -107,11 +107,10 @@ a:visited {
 }
 
 .custombox {
-    display: flex;
+    /* display: inline-block; */
     justify-content: space-between;
     border-radius: 15px 15px 0px 0px;
     background: rgb(163, 190, 158);
-    display: inline-block;
     width: 120px;
 }
 div {
@@ -155,23 +154,46 @@ nav {
     padding: 200px;
     align-items: flex;
     background:rgb(163, 190, 158);
+    border-radius: 20px;
 }
 
 .total {
-    padding: 180px 125px;
+    padding: 30px 100px 320px 100px;
     border-radius: 0px;
     background:white;
     color: rgb(163, 190, 158);
+    font-weight: bold;
+    text-decoration: underline;
+    outline-style: solid;
+    outline-width: 5px;
+}
+
+.checkout {
+    background:rgb(163, 190, 158);
+    padding: 20px;
+    border-radius: 50px;
+
 }
 .greenbox {
     background-color:rgb(163, 190, 158);
-    display: block;
     margin-top: 0;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 100px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+    margin-right: 200px;
+    padding: 50px;
+    display: inline-block;
 }
+.itembox {
+    background-color: white;
+    padding: 50px;
+    display: inline-block;
+    align-items: flex-end;
+    color:rgb(70, 111, 63);
+    width: 50px;
+    height: 50px;
+    font-size: smaller;
+}
+
 
 footer {
     background:rgb(163, 190, 158);
