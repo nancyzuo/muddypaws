@@ -178,10 +178,15 @@ nav {
     background-color:rgb(163, 190, 158);
     margin-top: 0;
     margin-bottom: 100px;
-    margin-left: 400px;
-    margin-right: 200px;
-    padding: 50px;
+    padding: 50px 50px 50px 0px;
     display: inline-block;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.petpage {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 }
 .itembox {
     background-color: white;
@@ -192,8 +197,30 @@ nav {
     width: 50px;
     height: 50px;
     font-size: smaller;
+    border-radius: 20px;
+}
+.itemboxgreen {
+    background-color:rgb(163, 190, 158);
+    padding: 50px;
+    display: inline-block;
+    align-items: flex-end;
+    color:rgb(70, 111, 63);
+    width: 50px;
+    height: 50px;
+    font-size: smaller;
+    border-radius: 20px;
 }
 
+.custompet {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    align-items: flex-start;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 30px;
+    color:rgb(70, 111, 63);
+}
 
 footer {
     background:rgb(163, 190, 158);
