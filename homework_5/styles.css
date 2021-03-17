@@ -108,7 +108,7 @@ a:visited {
 
 .custombox {
     /* display: inline-block; */
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 15px 15px 0px 0px;
     background: rgb(163, 190, 158);
     width: 120px;
@@ -132,6 +132,8 @@ nav {
     display: inline-block;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 0px;
+    margin: 0px;
 }
 .navtab {
     background-color: white;
@@ -147,7 +149,7 @@ nav {
     background-color:rgb(234, 255, 230);
     border-radius: 15px 15px 0px 0px;
     padding: 10px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-align: center;
 }
 .cart {
@@ -172,8 +174,10 @@ nav {
     background:rgb(163, 190, 158);
     padding: 20px;
     border-radius: 50px;
-
+    position: absolute;
+    right: 0px;
 }
+
 .greenbox {
     background-color:rgb(163, 190, 158);
     margin-top: 0;
