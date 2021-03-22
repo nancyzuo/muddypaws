@@ -11,7 +11,7 @@ header {
 }
 section {
     background: rgb(242, 249, 240);
-    padding: 100px 100px 0px 100px;
+    padding: 0px 100px 0px 100px;
     display: flex;
     flex-direction: row;
 }
@@ -21,7 +21,6 @@ h1 {
 h2 {
     color:rgb(70, 111, 63);
     text-align: center;
-    margin-top: 100px;
 }
 h3 {
     color:rgb(70, 111, 63);
@@ -35,7 +34,7 @@ p {
 }
 
 a:link {
-    color:rgb(163, 190, 158);
+    color:rgb(70, 111, 63);
     text-decoration: none;
 }
 a:hover {
@@ -60,13 +59,15 @@ a:visited {
     padding: 200px 100px 10px 100px;
     border-radius: 20px;
 }
+
+/* dog and cat pics on home page */
 .homecat {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
 }
 .homedog {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 /* reference: https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_fade */
@@ -107,11 +108,10 @@ a:visited {
 }
 
 .custombox {
-    /* display: inline-block; */
     justify-content: center;
     border-radius: 15px 15px 0px 0px;
     background: rgb(163, 190, 158);
-    width: 120px;
+    width: 200px;
 }
 div {
     display: inline-block;
@@ -180,19 +180,23 @@ nav {
 
 .greenbox {
     background-color:rgb(163, 190, 158);
+    width: 80%;
     margin-top: 0;
     margin-bottom: 100px;
-    padding: 50px 50px 50px 0px;
+    padding: 50px;
     display: inline-block;
     align-items: flex-end;
     justify-content: space-between;
 }
 .petpage {
+    width: 80%;
+    float: left;
     display: flex;
     justify-content: space-between;
     margin: auto;
 }
 .itembox {
+    margin: 0 auto;
     background-color: white;
     padding: 50px;
     display: inline-block;
@@ -217,11 +221,14 @@ nav {
 
 .custompet {
     background-color: white;
-    width: 300px;
-    height: 300px;
+    width: 30%;
+    float: left;
+    margin-right: 20px; 
+    /* width: 300px;
+    height: 300px; */
     align-items: flex-start;
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
     border-radius: 30px;
     color:rgb(70, 111, 63);
 }
@@ -234,4 +241,5 @@ footer {
     position: fixed;
     bottom: 0px;
     width: 100%;
+    outline: 3px white solid;
 }
