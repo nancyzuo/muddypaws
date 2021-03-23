@@ -164,14 +164,20 @@ nav {
     text-align: center;
 }
 .cart {
-    padding: 200px;
-    align-items: flex;
+    width: 50%;
+    height: auto;
+    float: left;
+    padding: 30px 100px 200px 100px;
+    margin-right: 50px;
     background:rgb(163, 190, 158);
     border-radius: 20px;
 }
 
 .total {
-    padding: 30px 100px 320px 100px;
+    float: right;
+    width: 30%;
+    height: auto;
+    padding: 30px 100px 150px 100px; 
     border-radius: 0px;
     background:white;
     color: rgb(163, 190, 158);
@@ -181,12 +187,14 @@ nav {
     outline-width: 5px;
 }
 
-.checkout {
+.checkout-button {
     background:rgb(163, 190, 158);
     padding: 20px;
     border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     position: absolute;
-    right: 0px;
+    right: 100px;
 }
 
 /* CUSTOMIZATION BOX */
