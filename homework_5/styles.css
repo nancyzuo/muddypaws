@@ -28,6 +28,7 @@ h3 {
 }
 p {
     margin: 0px;
+    padding: 0px;
 }
 .material-icons {
     font-size: 30px !important;
@@ -40,6 +41,7 @@ a:link {
 a:hover {
     color: rgb(70, 111, 63);
     text-decoration: underline;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto;
 }
 
 a:visited {
@@ -204,7 +206,6 @@ nav {
     width: 100%;
     margin-top: 0;
     margin-bottom: 100px;
-    padding: 50px;
     display: inline-block;
     align-items: flex-end;
     justify-content: space-between;
@@ -293,6 +294,28 @@ nav {
 .custompet img {
     width: 80%;
     height: 80%;
+}
+
+
+/* product detail page */
+.sizes {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 40px;
+}
+
+li:hover{
+    color: rgb(70, 111, 63);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.choose-size {
+    float: left;
+}
+
+.add-to-cart {
+    float: right;
 }
 
 footer {
