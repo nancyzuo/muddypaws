@@ -111,7 +111,7 @@ a:visited {
     justify-content: center;
     border-radius: 15px 15px 0px 0px;
     background: rgb(163, 190, 158);
-    width: 200px;
+    width: 150px;
 }
 div {
     display: inline-block;
@@ -182,7 +182,7 @@ nav {
 
 .greenbox {
     background-color:rgb(163, 190, 158);
-    width: 80%;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 100px;
     padding: 50px;
@@ -202,13 +202,14 @@ nav {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 1rem;
   }
 
 .grid > div {
-  background: black;
+  background: white;
   padding: 1rem;
+  border-radius: 20px;
 }
 
 .grid > div::before {
@@ -218,7 +219,6 @@ nav {
 }
 
 .grid > div {
-    /* ... */
     display: grid;
   }
 
@@ -258,18 +258,21 @@ nav {
     border-radius: 20px;
 }
 
+/* try it on your pet */
 .custompet {
     background-color: white;
-    width: 30%;
+    width: 50%;
     float: left;
-    margin-right: 20px; 
-    /* width: 300px;
-    height: 300px; */
+    margin-right: 50px; 
+    margin-left: 50px;
     align-items: flex-start;
-    /* margin-left: 50px;
-    margin-right: 50px; */
     border-radius: 30px;
     color:rgb(70, 111, 63);
+}
+
+.custompet img {
+    width: 80%;
+    height: 80%;
 }
 
 footer {
