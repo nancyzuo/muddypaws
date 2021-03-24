@@ -30,8 +30,15 @@ p {
     margin: 0px;
     padding: 0px;
 }
+
+/* cart and profile picture icons */
 .material-icons {
     font-size: 30px !important;
+    vertical-align: bottom;
+}
+
+.material-icons a {
+    text-decoration: none !important;
 }
 
 a:link {
