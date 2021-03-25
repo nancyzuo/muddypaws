@@ -299,6 +299,32 @@ nav {
     border-radius: 20px;
 }
 
+.add-cart {
+    /* position: absolute; */
+    /* width: 100%; */
+    background-color:rgb(70, 111, 63);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 20px;
+    font-size: smaller;
+}
+
+.item:hover .cart1,
+.item:hover .cart2,
+.item:hover .cart3,
+.item:hover .cart4,
+.item:hover .cart5,
+.item:hover .cart6 {
+    bottom: 50px;
+    color: white;
+    font-size: smaller;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+}
+
 /* try it on your pet */
 .custompet {
     background-color: white;
