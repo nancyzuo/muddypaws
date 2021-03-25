@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="main.js"></script>
     </head>
     <body>
         <header>
@@ -18,8 +19,8 @@
                 <div class="navright">
                     <div class="navtab"><a href="dog.html">dogs</a></div>
                     <div class="navtab"><a href="cat.html">cats</a></div>
-                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</i></a></div>
-                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</i></a></div>
+                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</a></i></div>
+                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</a></i><span>0</span></div>
                 </div>
             </nav> 
         </header>
@@ -39,8 +40,8 @@
             <div class="greenbox">
                 <div class="product-detail">
                     <div><a href="strawberry.html"><img src="images/strawberry.png" alt="strawberry" width="30%" height="30%"></a></div>
-                    <h2>strawberry collar</h2>
-                        <p>a warm-toned collar to complement your dog's fur tone.</p>
+                    <h2 id="item-color">strawberry collar</h2>
+                        <p id="item-description">a warm-toned collar to complement your dog's fur tone.</p>
                         <br/><br/>
                         <div class="choose-size">
                             <p>choose a size:</p>
@@ -52,7 +53,7 @@
                             </ul>
                         </div> <!--close choose-size-->
                         <div class="add-to-cart">
-                            <button>add to cart</button>
+                            <button type="button" onclick="main()" >add to cart</button>
                         </div>
                 </div> <!--close product detail-->
             </div> <!--close green box-->

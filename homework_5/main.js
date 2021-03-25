@@ -96,6 +96,14 @@ function setItems(product) {
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
+// adding different item color and description based on item clicked 
+// from: https://www.w3schools.com/js/js_htmldom_html.asp
+
+function productDetails() {
+    document.getElementById("item-color").innerHTML = ("grape");
+    document.getElementById("item-description").innerHTML = ("a cool-toned collar to complement your dog's fur");
+}
+
 function main(){
     addCart()
     cartNumbers()
