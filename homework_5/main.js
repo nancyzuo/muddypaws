@@ -57,7 +57,7 @@ function onLoadCartNumbers() {
     }
 }
 
-function cartNumbers() {
+function cartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers');
     
     if (productNumbers) { // if there is a productNumber
@@ -68,8 +68,33 @@ function cartNumbers() {
         localStorage.setItem('cartNumbers', 0); // set to 1 if no items
         document.querySelector('.carticon span').textContent = 0; // display # next to cart
     }
+    setItems(product);
 }
 
+// sets the attributes of items in cart and increments ones in cart of each
+function setItems(product) {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    console.log("My cartItems are", cartItems);
+
+    if (cartItems != null) {
+
+        if(cartItems[product.tag] == undefined) {
+            cartItems = { 
+                ...cartItems, // add diff item rather than overriding
+                [product.tag]: product 
+            }
+        }
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+            [product.tag]: product
+        } 
+    }
+    
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
 
 function main(){
     addCart()
