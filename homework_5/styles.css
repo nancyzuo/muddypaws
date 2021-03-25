@@ -128,12 +128,18 @@ a:visited {
     color: white;
 }
 
+/* tabs on top of custom box */
 .custombox {
     justify-content: center;
     border-radius: 15px 15px 0px 0px;
     background: rgb(163, 190, 158);
     width: 150px;
 }
+
+.item-categories {
+    float: right;
+}
+
 div {
     display: inline-block;
     margin: auto;
@@ -231,7 +237,7 @@ nav {
     justify-content: space-between;
 }
 .petpage {
-    width: 80%;
+    width: 90%;
     float: left;
     display: flex;
     justify-content: space-between;
@@ -299,6 +305,7 @@ nav {
     border-radius: 20px;
 }
 
+/* from: javascript shopping cart tutorial: https://www.youtube.com/watch?v=B20Getj_Zk4 */
 .add-cart {
     /* position: absolute; */
     /* width: 100%; */
