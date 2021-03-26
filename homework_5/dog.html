@@ -38,46 +38,56 @@
         </section>
         <!--box underneath tab with items-->
         <div class="petpage">
+            <!--popup box-->
+            <div class="popup" id="pop-up">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h1 id="collar-color">name of item</h1>
+                    <p id="collar-description">item description</p>
+                </div>
+            </div>
+            <!--pic of chonky dog on left-->
             <div class="custompet"><img src="images/dogbody.png" alt="a chonky dog"></div>
             <div class="greenbox">
                 <div class="grid">
                     <div class="item">
-                        <a href="strawberry.html"><img src="images/strawberry.png" alt="strawberry"></a>
+                        <a href="#" onclick="togglePopup('strawberry', 'warm toned collar.')"><img src="images/strawberry.png" alt="strawberry"></a>
                         <br/>
                         <h5>strawberry</h5>
                         <h6>$10.00</h6>
                         <a class="add-cart cart1" href="#">Add to Cart</a> <!--testing out hover cart-->
                     </div>
                     <div class="item">
-                        <a href="strawberry.html"><img src="images/blackberry.png" alt="blackberry"></a>
+                        <a href="#" onclick="togglePopup('blackberry', 'cool-toned collar.')"><img src="images/blackberry.png" alt="blackberry"></a>
                         <br/>
                         <h5>blackberry</h5>
                         <h6>$10.00</h6>
                         <a class="add-cart cart2" href="#">Add to Cart</a>
                     </div>
                     <div class="item">
-                        <a href="strawberry.html"><img src="images/crazyberry.png" alt="crazyberry"></a>
+                        <a href="#" onclick="togglePopup('crazyberry', 'blue-toned collar.')"><img src="images/crazyberry.png" alt="crazyberry"></a>
                         <br/>
                         <h5>crazyberry</h5>
                         <h6>$10.00</h6>
                         <a class="add-cart cart3" href="#">Add to Cart</a>
                     </div>
                     <div class="item">
-                        <a href="strawberry.html"><img src="images/fireorange.png" alt="orange"></a>
+                        <a href="#" onclick="togglePopup('fire orange', 'a orange-toned collar.')"><img src="images/fireorange.png" alt="orange"></a>
                         <br/>
                         <h5>fire orange</h5>
                         <h6>$10.00</h6>
                         <a class="add-cart cart4" href="#">Add to Cart</a>
                     </div>
                     <div class="item">
-                        <a href="strawberry.html"><img src="images/yellow.png" alt="yellow"></a>
+                        <a href="#" onclick="togglePopup('lemon', 'yellow-toned collar.')"><img src="images/yellow.png" alt="yellow"></a>
                         <br/>
                         <h5>tangy lemon</h5>
                         <h6>$10.00</h6>
                         <a class="add-cart cart5" href="#">Add to Cart</a>
                     </div>
                     <div class="item">
-                        <a href="strawberry.html"><img src="images/green.png" alt="green"></a>
+                        <a href="#" onclick="togglePopup('cucumba', 'green-toned collar.')"><img src="images/green.png" alt="green"></a>
                         <br/>
                         <h5>cucumba</h5>
                         <h6>$10.00</h6>

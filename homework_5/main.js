@@ -102,6 +102,16 @@ function setItems(product) {
 function productDetails() {
     document.getElementById("item-color").innerHTML = ("grape");
     document.getElementById("item-description").innerHTML = ("a cool-toned collar to complement your dog's fur");
+    document.getElementById("product-image").src = "images/blackberry.png";
+}
+
+
+// from: https://www.youtube.com/watch?v=iE_6pQ3RlZU
+function togglePopup(fruit, description) {
+    document.getElementById("pop-up").classList.toggle("active");
+    console.log("toggled");
+    document.getElementById("collar-color").innerHTML = (fruit);
+    document.getElementById("collar-description").innerHTML = (description);
 }
 
 function main(){
