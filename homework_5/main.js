@@ -121,6 +121,11 @@ function changeCollarColor(hexColor) {
     console.log("color changed to", hexColor);
 }
 
+// changes color for cat collar instead
+function changeCatCollar(hexColor) {
+    document.getElementById("chonky-cat").setAttribute("fill", hexColor);
+}
+
 function main(){
     addCart()
     cartNumbers()
