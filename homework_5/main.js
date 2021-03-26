@@ -99,11 +99,11 @@ function setItems(product) {
 // adding different item color and description based on item clicked 
 // from: https://www.w3schools.com/js/js_htmldom_html.asp
 
-function productDetails() {
-    document.getElementById("item-color").innerHTML = ("grape");
-    document.getElementById("item-description").innerHTML = ("a cool-toned collar to complement your dog's fur");
-    document.getElementById("product-image").src = "images/blackberry.png";
-}
+// function productDetails() {
+//     document.getElementById("item-color").innerHTML = ("grape");
+//     document.getElementById("item-description").innerHTML = ("a cool-toned collar to complement your dog's fur");
+//     document.getElementById("product-image").src = "images/blackberry.png";
+// }
 
 
 // from: https://www.youtube.com/watch?v=iE_6pQ3RlZU
@@ -112,6 +112,13 @@ function togglePopup(fruit, description) {
     console.log("toggled");
     document.getElementById("collar-color").innerHTML = (fruit);
     document.getElementById("collar-description").innerHTML = (description);
+}
+
+// changes color color based on mousing over that collar
+// is svg file of dog exported from figma
+function changeCollarColor(hexColor) {
+    document.getElementById("chonky-dog").setAttribute("fill", hexColor);
+    console.log("color changed to", hexColor);
 }
 
 function main(){
