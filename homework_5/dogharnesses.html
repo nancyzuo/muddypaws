@@ -6,8 +6,12 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!--link javascript file-->
+        <script src="main.js"></script>
+
     </head>
-    <body>
+    <body onload="main();">
         <header>
             <nav>
                 <div class="navleft">
@@ -18,8 +22,8 @@
                 <div class="navright">
                     <div class="navtab"><a href="dog.html">dogs</a></div>
                     <div class="navtab"><a href="cat.html">cats</a></div>
-                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</i></a></div>
-                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</i></a></div>
+                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</a></i></div>
+                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</a></i><span>0</span></div>
                 </div>
             </nav> 
         </header>
@@ -34,18 +38,82 @@
         </section>
         <!--box underneath tab with items-->
         <div class="petpage">
-            <div class="custompet"><img src="images/dogbody.png" alt="a chonky dog"></div>
+            <!--popup box-->
+            <div class="popup" id="pop-up">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h1 id="collar-color">name of item</h1>
+                    <p id="collar-description">item description</p>
+                </div>
+            </div>
+            <!--pic of chonky dog on left-->
+            <div class="custompet">
+                <!-- <img src="images/dogbody.png" alt="a chonky dog"> -->
+                <svg width="232" height="308" viewBox="0 0 232 308" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="121" cy="189.5" rx="90" ry="82.5" fill="#6B8167"/>
+                    <ellipse cx="91.5" cy="272.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="41.5" cy="225.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="156.5" cy="272.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="206.5" cy="216.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="121" cy="85.5" rx="75" ry="75.5" fill="#A3BE9E"/>
+                    <ellipse cx="42.0373" cy="49.7025" rx="22.7585" ry="37.6937" transform="rotate(41.5681 42.0373 49.7025)" fill="#A3BE9E"/>
+                    <ellipse cx="189.254" cy="42.7462" rx="22.7585" ry="37.6937" transform="rotate(-45 189.254 42.7462)" fill="#A3BE9E"/>
+                    <circle cx="74" cy="76" r="6" fill="white"/>
+                    <circle cx="169" cy="76" r="6" fill="white"/>
+                    <path d="M95 93C95.5452 100.446 99.2524 114.746 109.72 112.378C120.187 110.01 122.804 98.4725 122.804 93C123.167 101.074 126.511 116.254 136.978 112.378C147.446 108.502 147.7 97.8445 146.519 93" stroke="white" stroke-width="10"/>
+                    <path id="chonky-dog" d="M125 167L124.624 173.99L125.737 173.961L125 167ZM46.0234 129.644C59.3121 151.438 74.8981 162.518 89.5718 168.104C103.995 173.596 117.218 173.592 124.624 173.99L125.376 160.01C117.282 159.575 106.505 159.571 94.5532 155.021C82.8519 150.566 69.6879 141.562 57.9766 122.356L46.0234 129.644ZM125.737 173.961C148.109 171.592 163.357 164.89 174.615 156.32C185.709 147.874 192.55 137.843 198.164 130.114L186.836 121.886C180.95 129.99 175.291 138.209 166.135 145.18C157.143 152.026 144.391 157.908 124.263 160.039L125.737 173.961Z" fill="#000000"/> 
+                    <circle cx="122.5" cy="177.5" r="11.5" fill="#F7E440" stroke="#D8C626" stroke-width="2"/>
+                </div>
             <div class="greenbox">
                 <div class="grid">
-                    <div><a href="strawberry.html"><img src="images/strawberryharness.png" alt="strawberry"></a></div>
-                    <div><a href="strawberry.html"><img src="images/blackberryharness.png" alt="blackberry"></a></div>
-                    <div><a href="strawberry.html"><img src="images/crazyberryharness.png" alt="crazyberry"></a></div>
-                    <div><a href="strawberry.html"><img src="images/orangeharness.png" alt="orange"></a></div>
-                    <div><a href="strawberry.html"><img src="images/yellowharness.png" alt="yellow"></a></div>
-                    <div><a href="strawberry.html"><img src="images/greenharness.png" alt="green"></a></div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('strawberry', 'warm toned collar.');" onmouseover="changeCollarColor('#FE6565');"><img src="images/strawberryharness.png" alt="strawberry"></a>
+                        <br/>
+                        <h5>strawberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart1" href="#">Add to Cart</a> <!--testing out hover cart-->
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('blackberry', 'cool-toned collar.')" onmouseover="changeCollarColor('#562180');"><img src="images/blackberryharness.png" alt="blackberry"></a>
+                        <br/>
+                        <h5>blackberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart2" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('crazyberry', 'blue-toned collar.')" onmouseover="changeCollarColor('#658FFE');"><img src="images/crazyberryharness.png" alt="crazyberry"></a>
+                        <br/>
+                        <h5>crazyberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart3" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('fire orange', 'a orange-toned collar.')" onmouseover="changeCollarColor('#FEB765');"><img src="images/orangeharness.png" alt="orange"></a>
+                        <br/>
+                        <h5>fire orange</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart4" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('lemon', 'yellow-toned collar.')" onmouseover="changeCollarColor('#FDEA3F');"><img src="images/yellowharness.png" alt="yellow"></a>
+                        <br/>
+                        <h5>tangy lemon</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart5" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('cucumba', 'green-toned collar.')" onmouseover="changeCollarColor('#51B030');"><img src="images/greenharness.png" alt="green"></a>
+                        <br/>
+                        <h5>cucumba</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart6" href="#">Add to Cart</a>
+                    </div>
                 </div>  
             </div>
         </div>
         <footer>made with 💚 in pittsburgh, pa.</footer>
     </body>
 </html>
+
+

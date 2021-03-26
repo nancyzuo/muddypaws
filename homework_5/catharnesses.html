@@ -1,13 +1,18 @@
-<!--main page for cat section items-->
+
+<!--dog main item page-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Muddy Paws | Cats </title>
+        <title>Muddy Paws | Dogs</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!--link javascript file-->
+        <script src="main.js"></script>
+
     </head>
-    <body>
+    <body onload="main();">
         <header>
             <nav>
                 <div class="navleft">
@@ -18,10 +23,12 @@
                 <div class="navright">
                     <div class="navtab"><a href="dog.html">dogs</a></div>
                     <div class="navtab"><a href="cat.html">cats</a></div>
-                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</i></a></div>
-                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</i></a></div>
+                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</a></i></div>
+                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</a></i><span>0</span></div>
+                </div>
             </nav> 
         </header>
+        <!--tabs for different items by section-->
         <section>
             <h1>Cats</h1>  
             <div>
@@ -30,16 +37,65 @@
                 <div class="custombox"><a href="catstorage.html">storage</a></div>
             </div>
         </section>
+        <!--box underneath tab with items-->
         <div class="petpage">
-            <div class="custompet"><img src="images/catbody.png" alt="a chonky cat"></div>
+            <!--popup box-->
+            <div class="popup" id="pop-up">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h1 id="collar-color">name of item</h1>
+                    <p id="collar-description">item description</p>
+                </div>
+            </div>
+            <!--pic of chonky dog on left-->
+            <div class="custompet">
+                <img src="images/catbody.png" alt="a chonky cat">
+                </div>
             <div class="greenbox">
                 <div class="grid">
-                    <div><a href="strawberry.html"><img src="images/strawberryharness.png" alt="strawberry"></a></div>
-                    <div><a href="strawberry.html"><img src="images/blackberryharness.png" alt="blackberry"></a></div>
-                    <div><a href="strawberry.html"><img src="images/crazyberryharness.png" alt="crazyberry"></a></div>
-                    <div><a href="strawberry.html"><img src="images/orangeharness.png" alt="orange"></a></div>
-                    <div><a href="strawberry.html"><img src="images/yellowharness.png" alt="yellow"></a></div>
-                    <div><a href="strawberry.html"><img src="images/greenharness.png" alt="green"></a></div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('strawberry', 'warm toned collar.');" onmouseover="changeCollarColor('#FE6565');"><img src="images/strawberryharness.png" alt="strawberry"></a>
+                        <br/>
+                        <h5>strawberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart1" href="#">Add to Cart</a> <!--testing out hover cart-->
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('blackberry', 'cool-toned collar.')" onmouseover="changeCollarColor('#562180');"><img src="images/blackberryharness.png" alt="blackberry"></a>
+                        <br/>
+                        <h5>blackberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart2" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('crazyberry', 'blue-toned collar.')" onmouseover="changeCollarColor('#658FFE');"><img src="images/crazyberryharness.png" alt="crazyberry"></a>
+                        <br/>
+                        <h5>crazyberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart3" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('fire orange', 'a orange-toned collar.')" onmouseover="changeCollarColor('#FEB765');"><img src="images/orangeharness.png" alt="orange"></a>
+                        <br/>
+                        <h5>fire orange</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart4" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('lemon', 'yellow-toned collar.')" onmouseover="changeCollarColor('#FDEA3F');"><img src="images/yellowharness.png" alt="yellow"></a>
+                        <br/>
+                        <h5>tangy lemon</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart5" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('cucumba', 'green-toned collar.')" onmouseover="changeCollarColor('#51B030');"><img src="images/greenharness.png" alt="green"></a>
+                        <br/>
+                        <h5>cucumba</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart6" href="#">Add to Cart</a>
+                    </div>
                 </div>  
             </div>
         </div>
