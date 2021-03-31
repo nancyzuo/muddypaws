@@ -430,6 +430,41 @@ li:hover{
     float: right;
 }
 
+/* profile page */
+.profile-content {
+    width: 100%;
+    display: flex;
+}
+
+.left-profile {
+    margin-right: 0px;
+    padding-right: 0px;
+    
+}
+
+
+.left-profile img{
+    width: 50%;
+    height: 50%;
+    color:rgb(70, 111, 63);
+}
+
+.left-profile p {
+    clear: both;
+    color:rgb(70, 111, 63);
+    text-decoration: underline
+}
+
+.right-profile {
+    float: right;
+    color:rgb(70, 111, 63);
+    margin-right: auto;
+}
+
+.bottom-space {
+    clear:both;
+}
+
 footer {
     background:rgb(163, 190, 158);
     padding: 10px;
