@@ -19,7 +19,7 @@ section {
 /* for page headings */
 #page-title {
     color:rgb(70, 111, 63);
-    float: left;
+    padding-right: 300px;
 }
 
 h1 {
@@ -428,23 +428,6 @@ li:hover{
 
 .add-to-cart {
     float: right;
-}
-
-/* profile page */
-.profile-content {
-    display: flex;
-}
-
-
-.profile-photo img{
-    float: left;
-    color:rgb(70, 111, 63);
-    text-decoration: underline;
-}
-
-.profile-info {
-    float: left;
-    color:rgb(70, 111, 63);
 }
 
 footer {
