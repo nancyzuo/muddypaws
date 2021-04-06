@@ -1,0 +1,121 @@
+
+<!--dog main item page-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Muddy Paws | Dogs</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!--link javascript file-->
+        <script src="main.js"></script>
+
+    </head>
+    <body onload="main();">
+        <header>
+            <nav>
+                <div class="navleft">
+                    <a href="index.html" class="logo-text">
+                        <img src="images/logo.png" alt="paw" class="logo">Muddy Paws
+                    </a>
+                </div>
+                <div class="navright">
+                    <div class="navtab"><a href="dog.html">dogs</a></div>
+                    <div class="navtab"><a href="cat.html">cats</a></div>
+                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</a></i></div>
+                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</a></i><span>0</span></div>
+                </div>
+            </nav> 
+        </header>
+        <!--tabs for different items by section-->
+        <section>
+            <h1 id="page-title">Cats</h1>  
+            <div>
+                <div class="custombox"><a href="cat.html">collars</a></div>
+                <div class="custombox"><a href="catharnesses.html">harnesses</a></div>
+                <div class="custombox"><a href="catstorage.html">storage</a></div>
+            </div>
+        </section>
+        <!--box underneath tab with items-->
+        <div class="petpage">
+            <!--popup box-->
+            <div class="popup" id="pop-up">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <h1 id="collar-color">name of item</h1>
+                    <p id="collar-description">item description</p><br/>
+                    <p>available in these sizes: </p>
+                    <p><em>tiny small medium large</em></p>
+                </div>
+            </div>
+            <!--pic of chonky dog on left-->
+            <div class="custompet">
+                <!-- <img src="images/catbody.png" alt="a chonky cat"> -->
+                <svg width="230" height="330" viewBox="0 0 230 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="112" cy="211.5" rx="90" ry="82.5" fill="#6B8167"/>
+                    <ellipse cx="82.5" cy="294.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="32.5" cy="247.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="147.5" cy="294.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="197.5" cy="238.5" rx="18.5" ry="35.5" fill="#6B8167"/>
+                    <ellipse cx="112" cy="107.5" rx="75" ry="75.5" fill="#A3BE9E"/>
+                    <circle cx="65" cy="98.0001" r="6" fill="white"/>
+                    <circle cx="160" cy="98.0001" r="6" fill="white"/>
+                    <path d="M86 115C86.5452 122.446 90.2524 136.746 100.72 134.378C111.187 132.01 113.804 120.473 113.804 115C114.167 123.074 117.511 138.254 127.978 134.378C138.446 130.502 138.7 119.845 137.519 115" stroke="white" stroke-width="10"/>
+                    <path d="M27.8229 32.8646C26.8107 29.7549 29.7549 26.8107 32.8646 27.8229L84.3862 44.5938C87.2255 45.518 88.0879 49.1145 85.9766 51.2258L51.2258 85.9766C49.1145 88.0879 45.518 87.2255 44.5938 84.3863L27.8229 32.8646Z" fill="#A3BE9E"/>
+                    <path d="M196.53 27.8229C199.64 26.8107 202.584 29.7549 201.572 32.8646L184.801 84.3862C183.877 87.2255 180.28 88.0879 178.169 85.9766L143.418 51.2258C141.307 49.1145 142.169 45.518 145.009 44.5938L196.53 27.8229Z" fill="#A3BE9E"/>
+                    <path id="chonky-cat" d="M116 188L115.624 194.99L116.737 194.961L116 188ZM37.0234 150.644C50.3121 172.438 65.8981 183.518 80.5718 189.104C94.9954 194.596 108.218 194.592 115.624 194.99L116.376 181.01C108.282 180.575 97.5046 180.571 85.5532 176.021C73.8519 171.566 60.6879 162.562 48.9766 143.356L37.0234 150.644ZM116.737 194.961C139.109 192.592 154.357 185.89 165.615 177.32C176.709 168.874 183.55 158.843 189.164 151.114L177.836 142.886C171.95 150.99 166.291 159.209 157.135 166.18C148.143 173.026 135.391 178.908 115.263 181.039L116.737 194.961Z" fill="black"/>
+                    <circle cx="113.5" cy="198.5" r="11.5" fill="#F7E440" stroke="#D8C626" stroke-width="2"/>
+                    </svg>
+                </div>
+            <div class="greenbox">
+                <div class="grid">
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('strawberry', 'warm toned collar.');" onmouseover="changeCatCollar('#FE6565');"><img src="images/strawberry.png" alt="strawberry"></a>
+                        <br/>
+                        <h5>strawberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart1" href="#">Add to Cart</a> <!--testing out hover cart-->
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('blackberry', 'cool-toned collar.')" onmouseover="changeCatCollar('#562180');"><img src="images/blackberry.png" alt="blackberry"></a>
+                        <br/>
+                        <h5>blackberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart2" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('crazyberry', 'blue-toned collar.')" onmouseover="changeCatCollar('#658FFE');"><img src="images/crazyberry.png" alt="crazyberry"></a>
+                        <br/>
+                        <h5>crazyberry</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart3" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('fire orange', 'a orange-toned collar.')" onmouseover="changeCatCollar('#FEB765');"><img src="images/fireorange.png" alt="orange"></a>
+                        <br/>
+                        <h5>fire orange</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart4" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('lemon', 'yellow-toned collar.')" onmouseover="changeCatCollar('#FDEA3F');"><img src="images/yellow.png" alt="yellow"></a>
+                        <br/>
+                        <h5>tangy lemon</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart5" href="#">Add to Cart</a>
+                    </div>
+                    <div class="item">
+                        <a href="#" onclick="togglePopup('cucumba', 'green-toned collar.')" onmouseover="changeCatCollar('#51B030');"><img src="images/green.png" alt="green"></a>
+                        <br/>
+                        <h5>cucumba</h5>
+                        <h6>$10.00</h6>
+                        <a class="add-cart cart6" href="#">Add to Cart</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <footer>made with 💚 in pittsburgh, pa.</footer>
+    </body>
+</html>

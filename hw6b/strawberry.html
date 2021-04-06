@@ -1,0 +1,63 @@
+<!--dog main item page-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Muddy Paws | Dogs</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" type="image/jpg" href="images/logo.png"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navleft">
+                    <a href="index.html" class="logo-text">
+                        <img src="images/logo.png" alt="paw" class="logo">Muddy Paws
+                    </a>
+                </div>
+                <div class="navright">
+                    <div class="navtab"><a href="dog.html">dogs</a></div>
+                    <div class="navtab"><a href="cat.html">cats</a></div>
+                    <div class="profile"><i class="material-icons"><a href="profile.html">account_circle</a></i></div>
+                    <div class="carticon"><i class="material-icons"><a href="cart.html">shopping_cart</a></i><span>0</span></div>
+                </div>
+            </nav> 
+        </header>
+        <!--tabs for different items by section-->
+        <section>
+            <h1>Dogs</h1>  
+            <div>
+                <div class="custombox"><a href="dog.html">collars</a></div>
+                <div class="custombox"><a href="dogharnesses.html">harnesses</a></div>
+                <div class="custombox"><a href="dogstorage.html">storage</a></div>
+            </div>
+        </section>
+        <!--box underneath tab with items-->
+        <div class="petpage">
+            <!--picture of dog try on-->
+            <div class="custompet"><img src="images/dogbody.png" alt="a chonky dog"></div> 
+            <div class="greenbox">
+                <div class="product-detail">
+                    <div><a href="strawberry.html"><img src="images/strawberry.png" id= "product-image" alt="strawberry" width="30%" height="30%"></a></div>
+                    <h2 id="item-color">strawberry collar</h2>
+                        <p id="item-description">a warm-toned collar to complement your dog's fur tone.</p>
+                        <br/><br/>
+                        <div class="choose-size">
+                            <p>choose a size:</p>
+                            <ul class="sizes">
+                                <li>&gt tiny &lt</li>
+                                <li>&gt small &lt</li>
+                                <li>&gt medium &lt</li>
+                                <li>&gt large &lt</li>
+                            </ul>
+                        </div> <!--close choose-size-->
+                        <div class="add-to-cart">
+                            <button type="button" onclick="main()" >add to cart</button>
+                        </div>
+                </div> <!--close product detail-->
+            </div> <!--close green box-->
+        </div> <!--close pet page-->
+        <footer>made with 💚 in pittsburgh, pa.</footer>
+    </body>
+</html>
