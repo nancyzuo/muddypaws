@@ -3,7 +3,7 @@
 
 **for hw 6b**
 
-link to 6b site: nancyzuo.github.io/hw6b/
+link to 6b site: https://nancyzuo.github.io/hw6b/
 
 I added functionality for viewing the cart as well as the ability to clear items. The cart will update quantity if you choose more than one of the same item and it will calculate the total cost for the same item in the cart. I also fixed the bugs from prior for the cart so that it now counts the items properly. 
 
