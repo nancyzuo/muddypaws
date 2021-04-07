@@ -30,18 +30,18 @@ function addCart() {
         },
         {
             name: 'yellow collar',
-            tag: 'lemon',
+            tag: 'yellow',
             price: 10,
             inCart: 0
         },
         {
             name: 'green collar',
-            tag: 'cucumba',
+            tag: 'green',
             price: 10,
             inCart: 0
         }
     ];
-
+    // adds event listener to each item to identify which one is clicked
     for (let i=0; i < carts.length; i++) {
         carts[i].addEventListener('click', () => {
             cartNumbers(products[i]);
@@ -49,7 +49,8 @@ function addCart() {
         })
     }
 }
-
+ 
+// displays number from local storage
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     
@@ -58,6 +59,7 @@ function onLoadCartNumbers() {
     }
 }
 
+//increments cart number in cart
 function cartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers');
     
@@ -66,8 +68,8 @@ function cartNumbers(product) {
         localStorage.setItem('cartNumbers', productNumbers + 1); // increment by 1 if already has product
         document.querySelector('.carticon span').textContent = productNumbers + 1; // update # next to cart
     } else { // start at 0
-        localStorage.setItem('cartNumbers', 0); // set to 1 if no items
-        document.querySelector('.carticon span').textContent = 0; // display # next to cart
+        localStorage.setItem('cartNumbers', 1); // set to 1 if no items
+        document.querySelector('.carticon span').textContent = 1; // display # next to cart
     }
     setItems(product);
 }
@@ -76,22 +78,21 @@ function cartNumbers(product) {
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-    console.log("My cartItems are", cartItems);
-
-    if (cartItems != null) {
-
-        if(cartItems[product.tag] == undefined) {
-            cartItems = { 
-                ...cartItems, // add diff item rather than overriding
-                [product.tag]: product 
+    if (product != undefined) {
+        if (cartItems != null) {
+            if(cartItems[product.tag] == undefined) {
+                cartItems = { 
+                    ...cartItems, // add diff item rather than overriding
+                    [product.tag]: product 
+                }
             }
+            cartItems[product.tag].inCart += 1;
+        } else {
+            product.inCart = 1;
+            cartItems = {
+                [product.tag]: product
+            } 
         }
-        cartItems[product.tag].inCart += 1;
-    } else {
-        product.inCart = 1;
-        cartItems = {
-            [product.tag]: product
-        } 
     }
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
@@ -100,8 +101,8 @@ function totalCost(product) {
     // console.log("The product price is", product.price);
     let cartCost = localStorage.getItem('totalCost');
     
-    console.log("My cartCost is", cartCost);
-    console.log(typeof cartCost);
+    // console.log("My cartCost is", cartCost);
+    // console.log(typeof cartCost);
 
     if(cartCost != null) {
         cartCost = parseInt(cartCost); // convert from string into number
@@ -114,39 +115,42 @@ function totalCost(product) {
 
 function displayCart() {
     let cartItems = localStorage.getItem("productsInCart");
-    cartItems = JSON.parse() // convert to javascript from getting in local storage
-    let productContainer = document.querySelector("products-container");
-    console.log(productContainer);
+    cartItems = JSON.parse(cartItems); // convert to javascript from getting in local storage
+
+    // console.log(cartItems); 
+    let productContainer = document.querySelector(".products");
+    // console.log(productContainer);
     if(cartItems && productContainer) {
         productContainer.innerHTML = ''; // want it to be empty when starting
         Object.values(cartItems).map(item => { // icon from: https://ionicons.com/
             productContainer.innerHTML +=  `
-            <div class="product">
-                <ion-icon name="close-circle-outline"></ion-icon>
-                <img src="./images/${item.tag}.jpg">
-                <span>${item.name}</span>
-            <div>
 
-            `
+            <div class="product">
+                <ion-icon name="close-circle" onclick="deleteItem();"></ion-icon>
+                <img src="images/${item.tag}.png">
+                <h6>${item.name}</h6>
+                <span>$${item.price}.00 &emsp; &emsp; &emsp; &emsp;</span> 
+                <span>${item.inCart}</span>
+                <span>&emsp; &emsp; &emsp; &emsp; $${item.inCart * item.price}.00</span>
+            </div>
+
+            `;
         });
-        
+
     }
 }
 
-// adding different item color and description based on item clicked 
-// from: https://www.w3schools.com/js/js_htmldom_html.asp
 
-// function productDetails() {
-//     document.getElementById("item-color").innerHTML = ("grape");
-//     document.getElementById("item-description").innerHTML = ("a cool-toned collar to complement your dog's fur");
-//     document.getElementById("product-image").src = "images/blackberry.png";
-// }
-
+// deletes items when you press on 'x'
+function deleteItem() {
+    localStorage.clear(); //clears your local storage
+    location.reload(); //refreshes page
+}
 
 // from: https://www.youtube.com/watch?v=iE_6pQ3RlZU
 function togglePopup(fruit, description) {
     document.getElementById("pop-up").classList.toggle("active");
-    console.log("toggled");
+    // console.log("toggled");
     document.getElementById("collar-color").innerHTML = (fruit);
     document.getElementById("collar-description").innerHTML = (description);
 }
@@ -155,7 +159,7 @@ function togglePopup(fruit, description) {
 // is svg file of dog exported from figma
 function changeCollarColor(hexColor) {
     document.getElementById("chonky-dog").setAttribute("fill", hexColor);
-    console.log("color changed to", hexColor);
+    // console.log("color changed to", hexColor);
 }
 
 // changes color for cat collar instead
@@ -164,8 +168,8 @@ function changeCatCollar(hexColor) {
 }
 
 function main(){
-    addCart()
-    cartNumbers()
-    onLoadCartNumbers()
+    addCart() // adds to cart
+    //cartNumbers() // increments
+    onLoadCartNumbers() // gets number 
     displayCart()
 }

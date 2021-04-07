@@ -479,6 +479,7 @@ li:hover{
     justify-content: space-around;
     margin: 0 auto;
     margin-top: 50px;
+    color:rgb(70, 111, 63);
     
 }
 
@@ -488,26 +489,72 @@ li:hover{
     max-width: 650px;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 4px solid lightgrey;
+    border-bottom:rgb(70, 111, 63) 2px solid;
     margin: 0 auto;
 }
 
+.product {
+    border-bottom:rgb(163, 190, 158) 1px dotted;
+}
+
 .product-title {
-    width: 45%;
+    width: 20%;
+    min-width: 150px;
+    align-items: left;
 }
 
 .price {
-    width: 15%;
-    display: flex;
-    align-items: center;
+    width: 50%;
+    min-width: 150px;
+    /* display: flex; */
 }
 
-.total {
-    width: 10%;
-    border-bottom: 1px solid lightgray;
-    display: flex;
-    align-items: center;
+.quantity {
+    width: 70%;
+    min-width: 150px;
 }
+
+.total-items {
+    width: 90%;
+    min-width: 150px;
+    /* border-bottom: 1px solid lightgray; */
+    /* display: flex; */
+}
+
+.products-container ion-icon {
+    font-size: 20px;
+    color:rgb(70, 111, 63);
+    margin-left: 0px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+.products-container img {
+    width: 10%;
+    height: 10%;
+    float: left;
+}
+
+.products-container h6 {
+    float: left;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 30%;
+}
+
+.basketTotal {
+    width: 10%;
+}
+
 
 footer {
     background:rgb(163, 190, 158);
